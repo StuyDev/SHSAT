@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <meta charset="utf-8">
+    <title>{% block title%} {{title}} {% endblock title %}| StuyDev</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="../static/style.css" rel="stylesheet">
+
+    {% endblock head %}
+  </head>
+  <body>
+    {% block navbar %}
+    <!--==========================
+	Header
+	============================-->
+    {% if header %}
+    <header id="header">
+      {% else %}
+      <header id = "header" class = "header-fixed">
+	       {% endif %}
+         <div class="container">
+
+            <nav id="nav-menu-container">
+              <ul class="nav-menu">
+                <li>Test</li>
+              </ul>
+            </nav><!-- #nav-menu-container -->
+        </div>
+      </header><!-- #header -->
+    {% endblock navbar %}
+
+    {% block body %}
+        <!--==========================
+  	  home Section
+  	  ============================-->
+        <section id="home">
+  	<div class="home-container">
+  	  <h2>StuyDev</h2>
+  	  <h1>Test site</h1>
+  	  <br><br><br>
+  	  <a href="#about" class="btn-get-started">About Us!</a>
+  	</div>
+        </section><!-- #home -->
+
+        <main id="main">
+
+  	<!--==========================
+  	    About Us Section
+  	    ============================-->
+          <br><br><br>
+  	<section id="about">
+  	  <div class="container wow fadeInUp">
+  	    <div class="container">
+
+                <h2 class="title" >StuyDev</h2>
+                <p style="text-align:center;">
+  		We're trying to change education in this city!
+                </p>
+  	    </div>
+  	  </div>
+  	</section>
+  	{% endblock body %}
+  </main>
+      </header>
+    </body>
+    </html>
